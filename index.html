@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.1.0.js"></script>
+      <script src="js/scripts.js"></script>
+
+  </head>
+  <title>Programming Survey</title>
+  <body>
+    <div class="jumbotron text-center">
+      <h2>Programming Tracker</h2>
+      <p>Answer a few questions to figure out which programming language you should learn</p>
+    </div>
+
+     <div class="container">
+
+       <div>
+         <span id="result"></span>
+         <img id="ruby" src= "ruby.jpg" class="img">
+         <img id="java" src= "java.jpg" class="img">
+         <img id="css" src= "css.jpg" class="img">
+       </div>
+
+       <form id="survey">
+         <div class="form-group">
+           <div class="row">
+             <div class="col-xs-12">
+           <label for="userName"></label>
+           <input id="userName" class="form-control" type="text" placeholder="What's your name">
+        </div>
+      </div>
+
+         <ol>
+           <li>
+              <div class="radio"> <pre>Do you enjoy designing websites?</pre>
+              <br></br>
+                <label class="radio-label"><input type="radio"  name="design" value="yes">
+                    Yes</label>
+              </div>
+
+                <div class="radio">
+                  <label><input type="radio" name="design" value="no">
+                      No</label>
+                </div>
+
+                  <div class="radio">
+                    <label><input type="radio" name="design" value="somewhat">
+                        Somewhat</label>
+                  </div>
+          </li>
+
+          <li>
+            <div class="radio"> <pre>Do want to focus on front end work or back end work?</pre>
+              <br></br>
+              <label>
+                <input type="radio" name="frontBack" value="frontend">
+                  Front End Work
+              </label>
+              </div>
+
+            <div class="radio">
+              <label>
+                <input type="radio" name="frontBack" value="backend">
+                  Back End Work
+              </label>
+              </div>
+
+              <div class="radio">
+                <label>
+                  <input type="radio" name="frontBack" value="either">
+                    No preference
+                </label>
+                </div>
+      <li>
+        <div class="radio"><pre>Would you like to work on mobile applications?</pre>
+          <br></br>
+          <label>
+            <input type="radio" name="mobile" value="yes">
+                Yes
+          </label>
+        </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" name="mobile" value="no">
+              No
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input type="radio" name="mobile" value="either">
+              No preference
+        </label>
+      </div>
+    </li>
+
+
+    <li>
+        <div class="radio"><pre>Do you want to create interactive web applications?</pre>
+          <br></br>
+          <label>
+            <input type="radio" name="webapp" value="yes">
+                Yes
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="webapp" value="no">
+                No
+          </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="webapp" value="either">
+                No preference
+          </label>
+        </div>
+    </li>
+
+    <li>
+      <div class="radio"><pre>Do you want to work for a large enterprise/the government, or would you prefer to work in a start up environment?</pre>
+        <br></br>
+        <label>
+          <input type="radio" name="governmentStartup" value="government">
+              Large enterprise
+        </label>
+        </div>
+
+        <div class="radio">
+          <label>
+            <input type="radio" name="governmentStartup" value="startup">Start-up
+          </label>
+        </div>
+
+          <div class="radio">
+            <label>
+              <input type="radio" name="governmentStartup" value="either">Either
+            </label>
+            <br></br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+      </li>
+    </ol>
+  </form>
+</div>
+
+</body>
+</html>
