@@ -38,7 +38,7 @@
               }
             }
 //This does not work
-      else if (design === 'somewhat') {
+      else {
           alert ('somewhat');
           if (frontBack === 'frontend' || frontBack === 'backend' || frontBack === 'either') {
             if (mobile==='yes' || mobile === 'no'){
