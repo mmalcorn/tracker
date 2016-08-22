@@ -22,7 +22,7 @@
           }
         }
 
-        if (design === 'yes' || design === 'no' || design === 'either') {
+        if (design === 'yes'|| design === 'either') {
             if (frontBack === 'frontend' || frontBack === 'backend' || frontBack === 'either') {
               if (mobile==='yes' || mobile === 'no' || mobile === 'either'){
               if (webapp === 'yes' || webapp === 'no' || webapp === 'either') {
@@ -44,28 +44,30 @@
                    }
                  }
 
-        // if (design === 'no') {
-        //   if (frontBack ==='frontend' || mobile === 'no' || mobile === 'either') {
-        //          if (webapp === 'yes' || webapp === 'no') {
-        //            if (governmentStartup === 'startup' || governmentStartup === 'either') {
-        //           $("#survey").hide();
-        //            $("#ruby").fadeToggle();
-        //          }
-        //        }
-        //      }
-        //    }
-           //
-          //   if (design === "either"){
-          //     if (frontBack === 'either'){
-          //      if (mobile === 'no' || mobile ==='either'){
-          //        if (webapp === 'yes'){
-          //          if (governmentStartup === 'startup'){
-          //            $("#ruby").show();
-          //          }
-          //        }
-          //      }
-          //    }
-          //  }
+          if (frontBack === 'frontend') {
+            if (mobile === 'yes' || mobile === 'either'){
+              if (webapp === 'yes' || webapp === 'either'){
+                if (governmentStartup === 'government' || governmentStartup === 'startup' || governmentStartup === 'either'){
+                  $("#survey").hide();
+                  $("#css").slideToggle();
+                  $("#result").text(name + " " + "you should consider taking the CSS track")
+                }
+              }
+            }
+          }
+
+          else if (frontBack === 'backend') {
+            if (mobile ==='yes' || mobile === 'either'){
+              if (webapp === 'yes' || webapp === 'no' || webapp === 'either'){
+                if (governmentStartup === 'startup' || governmentStartup === 'either'){
+                  $("#survey").hide();
+                   $("#ruby").fadeToggle();
+                   $("#result").text(name + " " + "you should consider learning Ruby.")
+                 }
+               }
+             }
+           }
+
 
            else {
               if (frontBack==='backend' || frontBack==='either') {
