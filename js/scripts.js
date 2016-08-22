@@ -11,39 +11,45 @@
       if (design === 'yes') {
         if (frontBack === 'frontend' || frontBack === 'either'){
           if (mobile === 'yes' || mobile === 'no' || mobile ==='either') {
-              if (webapp ==='yes' || webapp ==='either') {
-                  if (governmentStartup === 'government' || governmentStartup==='startup' || governmentStartup=== 'either') {
-                    $("#survey").hide();
-                    $("#css").slideToggle();
-                    $("#result").text(name + " " + "you should consider taking the CSS track")
+            if (webapp ==='yes' || webapp ==='either') {
+              if (governmentStartup === 'government' || governmentStartup==='startup' || governmentStartup=== 'either') {
+                  $("#survey").hide();
+                  $("#css").slideToggle();
+                  $("#result").text(name + " " + "you should consider taking the CSS track")
                 }
               }
             }
           }
         }
 
-        if (design === 'yes'|| design === 'either') {
-            if (frontBack === 'frontend' || frontBack === 'backend' || frontBack === 'either') {
-              if (mobile==='yes' || mobile === 'no' || mobile === 'either'){
-              if (webapp === 'yes' || webapp === 'no' || webapp === 'either') {
-                if (governmentStartup === 'startup' || governmentStartup === 'either')
+        else if (design === 'no') {
+            if (frontBack != 'frontend') {
+              if (mobile === 'yes' || mobile === 'either') {
+                 if (webapp ==='yes' || webapp ==='no') {
+                   if (governmentStartup === "government" || governmentStartup === 'either') {
            $("#survey").hide();
-            $("#ruby").fadeToggle();
-            $("#result").text(name + " " + "you should consider learning Ruby.")
+            $("#java").fadeToggle();
+            $("#result").text(name + " " + "you should consider learning Java.")
                     }
                   }
                 }
               }
+            }
+//This does not work
+      if (design === 'either') {
+          if (frontBack === 'frontend' || frontBack === 'backend' || frontBack === 'either') {
+            if (mobile==='yes' || mobile === 'no'){
+              if (webapp === 'yes' || webapp === 'no') {
+                if (governmentStartup === 'startup' || governmentStartup === 'either')
+                  $("#survey").hide();
+                  $("#ruby").fadeToggle();
+                  $("#result").text(name + " " + "you should consider learning Ruby.")
+                  }
+                }
+              }
+            }
 
-
-       else if (design === 'no') {
-           if (frontBack != 'frontend' || mobile === 'yes' || governmentStartup === 'government' && webapp==='yes' || webapp==='no') {
-          $("#survey").hide();
-           $("#java").fadeToggle();
-           $("#result").text(name + " " + "you should consider learning Java.")
-                   }
-                 }
-
+//This doesn't seem to work
           if (frontBack === 'frontend') {
             if (mobile === 'yes' || mobile === 'either'){
               if (webapp === 'yes' || webapp === 'either'){
@@ -55,12 +61,12 @@
               }
             }
           }
-
+//This seems to work:
           else if (frontBack === 'backend') {
             if (mobile ==='yes' || mobile === 'either'){
               if (webapp === 'yes' || webapp === 'no' || webapp === 'either'){
                 if (governmentStartup === 'startup' || governmentStartup === 'either'){
-                  $("#survey").hide();
+                   $("#survey").hide();
                    $("#ruby").fadeToggle();
                    $("#result").text(name + " " + "you should consider learning Ruby.")
                  }
@@ -69,19 +75,19 @@
            }
 
 
-           else {
-              if (frontBack==='backend' || frontBack==='either') {
-                if (mobile==='yes' || mobile==='no' || mobile === 'either') {
-                  if (webapp==='either' || webapp==='no') {
-                    if (governmentStartup === 'government' || governmentStartup === 'either') {
-                      $("#result").text(name + " " + "you should consider learning Java")
-                      $("#survey").hide();
-                      $("#java").show();
+          else {
+            if (frontBack==='backend' || frontBack==='either') {
+              if (mobile==='yes' || mobile==='no' || mobile === 'either') {
+                if (webapp==='either' || webapp==='no') {
+                  if (governmentStartup === 'government' || governmentStartup === 'either') {
+                    $("#result").text(name + " " + "you should consider learning Java")
+                    $("#survey").hide();
+                    $("#java").show();
 
                    }
                  }
                }
              }
            }
-      })
+       })
     });
