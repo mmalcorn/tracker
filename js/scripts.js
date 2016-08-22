@@ -7,36 +7,49 @@
       var mobile = $("input:radio[name=mobile]:checked").val();
       var webapp = $("input:radio[name=webapp]:checked").val();
       var governmentStartup = $("input:radio[name=governmentStartup]:checked").val();
-
+      debugger;
       if (design === 'yes') {
         alert ('yes');
         if (frontBack === 'frontend' || frontBack === 'either'){
+          alert ('frontend or either');
           if (mobile === 'yes' || mobile === 'no' || mobile ==='either') {
             if (webapp ==='yes' || webapp ==='either') {
               if (governmentStartup === 'government' || governmentStartup==='startup' || governmentStartup=== 'either') {
-                  $("#survey").hide();
-                  $("#css").slideToggle();
-                  $("#result").text(name + " " + "you should consider taking the CSS track")
+                $("#survey").hide();
+                $("#css").slideToggle();
+                $("#result").text(name + " " + "you should consider taking the CSS track")
+              }
+            }
+          }
+        } else if (frontBack === 'backend'){
+          alert ('backend');
+          if (mobile ==='yes' || mobile === 'either'){
+            alert ('mobile yes or either');
+            $("#survey").hide();
+            $("#java").fadeToggle();
+            $("#result").text(name + " " + "you should consider learning Java.")
+          }
+          else {
+            alert('mobile no-display an image c#');
+          }
+        }
+      }
+
+
+      else if (design === 'no') {
+        alert ('no');
+        if (frontBack != 'frontend') {
+          if (mobile === 'yes' || mobile === 'either') {
+             if (webapp ==='yes' || webapp ==='no') {
+               if (governmentStartup === "government" || governmentStartup === 'either') {
+       $("#survey").hide();
+        $("#java").fadeToggle();
+        $("#result").text(name + " " + "you should consider learning Java.")
                 }
               }
             }
           }
-        }
-
-        else if (design === 'no') {
-          alert ('no');
-            if (frontBack != 'frontend') {
-              if (mobile === 'yes' || mobile === 'either') {
-                 if (webapp ==='yes' || webapp ==='no') {
-                   if (governmentStartup === "government" || governmentStartup === 'either') {
-           $("#survey").hide();
-            $("#java").fadeToggle();
-            $("#result").text(name + " " + "you should consider learning Java.")
-                    }
-                  }
-                }
-              }
-            }
+      }
 //This does not work
       else {
           alert ('somewhat');
