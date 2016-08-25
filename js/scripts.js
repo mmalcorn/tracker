@@ -9,34 +9,28 @@
       var governmentStartup = $("input:radio[name=governmentStartup]:checked").val();
 
       if (design === 'yes') {
-        alert ('yes');
         if (frontBack === 'frontend' || frontBack === 'either'){
-          alert ('frontend or either');
           if (mobile === 'yes' || mobile === 'no' || mobile ==='either') {
             if (webapp ==='yes' || webapp==='no'|| webapp ==='either') {
               if (governmentStartup === 'government' || governmentStartup==='startup' || governmentStartup=== 'either') {
                 $("#survey").hide();
                 $("#css").slideToggle();
-                $("#result").text(name + " " + "you should consider taking the CSS track")
+                $("#result").text(name + " ," + "you should consider taking the CSS track")
               }
             }
           }
         }
       }
       else if (frontBack === 'backend'){
-          alert ('backend');
           $("#survey").hide();
           $("#java").fadeToggle();
-          $("#result").text(name + " " + "you should consider learning java.")
+          $("#result").text(name + " ," + "you should consider learning java.")
           if (mobile ==='yes' || mobile === 'either'){
-            alert ('mobile yes or either');
           if (webapp === 'no' || webapp === 'either'){
-            alert('webapp is no or either')
           if (governmentStartup ==='government' || governmentStartup === 'startup' || governmentStartup ==='either'){
-            alert('any agency to work for')
             $("#survey").hide();
             $("#java").fadeToggle();
-            $("#result").text(name + " " + "you should consider learning Java.")
+            $("#result").text(name + " ," + "you should consider learning Java.")
           }
         }
       }
@@ -44,7 +38,7 @@
           else {
             $("#survey").hide();
              $("#ruby").fadeToggle();
-             $("#result").text(name + " " + "you should consider learning Ruby.");
+             $("#result").text(name + " ," + "you should consider learning Ruby.");
           }
       })
   });
