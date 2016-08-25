@@ -1,15 +1,12 @@
-body {
-}
-
 .img {
   width: 200px;
   height: 200px;
+  border-radius: 25px;
   float: center;
 }
 
 #ruby, #css, #java {
   display: none;
-
 }
 
 .jumbotron {
